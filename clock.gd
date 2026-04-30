@@ -50,10 +50,12 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	seconds += delta * time_scale
 	var s := fmod(seconds, 60.0) / 60.0
+	var m := fmod(seconds / 60.0, 60.0) / 60.0
+	var h := fmod(seconds / 3600.0, 12.0) / 12.0
 	second_arm.rotation = s * TAU
-	minute_arm.rotation = fmod(seconds / 60.0, 60.0) * TAU / 60.0
-	hour_arm.rotation = fmod(seconds / 3600.0, 12.0) * TAU / 12.0
-	visualization.self_modulate = Color.from_hsv(s, 0.25, 1.0)
+	minute_arm.rotation = m * TAU
+	hour_arm.rotation = h * TAU
+	visualization.self_modulate = Color(s, m, h)
 
 func set_uniform_scale(scale_factor: float) -> void:
 	var scale_vector = Vector2(scale_factor, scale_factor)

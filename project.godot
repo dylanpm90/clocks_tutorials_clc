@@ -11,6 +11,10 @@ config_version=5
 [application]
 
 config/name="Clocks with Rings 3"
+config/description="3.1 Ring for second arm.
+3.2 Three rings
+3.3 Ring colors"
+config/version="1"
 run/main_scene="uid://3sed6wqjxdbe"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
