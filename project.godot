@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Clocks with Rings 1"
+config/name="Clocks with Rings 3"
 run/main_scene="uid://3sed6wqjxdbe"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
